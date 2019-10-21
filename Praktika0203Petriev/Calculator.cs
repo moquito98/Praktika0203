@@ -14,6 +14,7 @@ namespace Praktika0203Petriev
     {
         double result = 0;
         int lastClick = 0;
+        bool firstNumber = false;
         public Calculator()
         {
             InitializeComponent();
@@ -66,8 +67,33 @@ namespace Praktika0203Petriev
 
         private void button11_Click(object sender, EventArgs e)
         {
-            result += Convert.ToInt32(textBox1.Text);
-            textBox2.Text = result.ToString();
+            if (firstNumber == false || result == 0)
+            {
+                result += Convert.ToInt32(textBox1.Text);
+                firstNumber = true;
+            }
+            else if (textBox1.Text != "0")
+            {
+                switch (lastClick)
+                {
+                    case 1:
+                        result += Convert.ToInt32(textBox1.Text);
+                        textBox2.Text = result.ToString();
+                        break;
+                    case 2:
+                        result -= Convert.ToInt32(textBox1.Text);
+                        textBox2.Text = result.ToString();
+                        break;
+                    case 3:
+                        result *= Convert.ToInt32(textBox1.Text);
+                        textBox2.Text = result.ToString();
+                        break;
+                    case 4:
+                        result /= Convert.ToInt32(textBox1.Text);
+                        textBox2.Text = result.ToString();
+                        break;
+                }
+            }
             textBox1.Text = "0";
             lastClick = 1;
         }
@@ -98,7 +124,9 @@ namespace Praktika0203Petriev
 
         private void button15_Click(object sender, EventArgs e)
         {
+            firstNumber = false;
             textBox1.Clear();
+            textBox2.Text = "0";
             textBox1.Text = "0";
             result = 0;
         }
@@ -123,16 +151,66 @@ namespace Praktika0203Petriev
 
         private void button12_Click(object sender, EventArgs e)
         {
-            result -= Convert.ToInt32(textBox1.Text);
-            textBox2.Text = result.ToString();
+            if (firstNumber == false || result == 0)
+            {
+                result += Convert.ToInt32(textBox1.Text);
+                firstNumber = true;
+            }
+            else if(textBox1.Text != "0")
+            {
+                switch (lastClick)
+                {
+                    case 1:
+                        result += Convert.ToInt32(textBox1.Text);
+                        textBox2.Text = result.ToString();
+                        break;
+                    case 2:
+                        result -= Convert.ToInt32(textBox1.Text);
+                        textBox2.Text = result.ToString();
+                        break;
+                    case 3:
+                        result *= Convert.ToInt32(textBox1.Text);
+                        textBox2.Text = result.ToString();
+                        break;
+                    case 4:
+                        result /= Convert.ToInt32(textBox1.Text);
+                        textBox2.Text = result.ToString();
+                        break;
+                }
+            }
             textBox1.Text = "0";
             lastClick = 2;
         }
 
         private void button14_Click(object sender, EventArgs e)
         {
-            result *= Convert.ToInt32(textBox1.Text);
-            textBox2.Text = result.ToString();
+            if (firstNumber == false || result == 0)
+            {
+                result += Convert.ToInt32(textBox1.Text);
+                firstNumber = true;
+            }
+            else if(textBox1.Text != "0")
+            {
+                switch (lastClick)
+                {
+                    case 1:
+                        result += Convert.ToInt32(textBox1.Text);
+                        textBox2.Text = result.ToString();
+                        break;
+                    case 2:
+                        result -= Convert.ToInt32(textBox1.Text);
+                        textBox2.Text = result.ToString();
+                        break;
+                    case 3:
+                        result *= Convert.ToInt32(textBox1.Text);
+                        textBox2.Text = result.ToString();
+                        break;
+                    case 4:
+                        result /= Convert.ToInt32(textBox1.Text);
+                        textBox2.Text = result.ToString();
+                        break;
+                }
+            }
             textBox1.Text = "0";
             lastClick = 3;
         }
@@ -140,11 +218,72 @@ namespace Praktika0203Petriev
         private void button13_Click(object sender, EventArgs e)
         {
 
-            result /= Convert.ToInt32(textBox1.Text);
-            textBox2.Text = result.ToString();
+            if (firstNumber == false || result == 0)
+            {
+                result += Convert.ToInt32(textBox1.Text);
+                firstNumber = true;
+            }
+            else if(textBox1.Text != "0")
+            {
+                switch (lastClick)
+                {
+                    case 1:
+                        result += Convert.ToInt32(textBox1.Text);
+                        textBox2.Text = result.ToString();
+                        break;
+                    case 2:
+                        result -= Convert.ToInt32(textBox1.Text);
+                        textBox2.Text = result.ToString();
+                        break;
+                    case 3:
+                        result *= Convert.ToInt32(textBox1.Text);
+                        textBox2.Text = result.ToString();
+                        break;
+                    case 4:
+                        result /= Convert.ToInt32(textBox1.Text);
+                        textBox2.Text = result.ToString();
+                        break;
+                }
+            }
             textBox1.Text = "0";
             lastClick = 4;
-            
+
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                textBox1.Text = textBox1.Text.Substring(0, textBox1.Text.Length - 1);
+            }
+            catch
+            {
+                textBox1.Text = "0";
+            }
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            textBox2.Text = Convert.ToString(Math.Sin(Convert.ToInt32(textBox1.Text)));
+            textBox1.Text = "0";
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            textBox2.Text = Convert.ToString(Math.Cos(Convert.ToInt32(textBox1.Text)));
+            textBox1.Text = "0";
+        }
+
+        private void button21_Click(object sender, EventArgs e)
+        {
+            textBox2.Text = Convert.ToString(Math.Pow(Convert.ToInt32(textBox1.Text), 2));
+            textBox1.Text = "0";
+        }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+            textBox2.Text = Convert.ToString(Math.Log10(Convert.ToInt32(textBox1.Text)));
+            textBox1.Text = "0";
         }
     }
 }
