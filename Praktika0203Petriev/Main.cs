@@ -27,5 +27,17 @@ namespace Praktika0203Petriev
             Calculator calculator = new Calculator();
             calculator.Show();
         }
+
+        private void массивToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Mas mas = new Mas();
+            mas.Show();
+        }
+
+        private void переключателиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Files files = new Files();
+            files.Show();
+        }
     }
 }

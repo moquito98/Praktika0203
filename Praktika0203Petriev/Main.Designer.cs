@@ -67,12 +67,14 @@
             this.массивToolStripMenuItem.Name = "массивToolStripMenuItem";
             this.массивToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.массивToolStripMenuItem.Text = "Массив";
+            this.массивToolStripMenuItem.Click += new System.EventHandler(this.массивToolStripMenuItem_Click);
             // 
             // переключателиToolStripMenuItem
             // 
             this.переключателиToolStripMenuItem.Name = "переключателиToolStripMenuItem";
             this.переключателиToolStripMenuItem.Size = new System.Drawing.Size(108, 20);
             this.переключателиToolStripMenuItem.Text = "Переключатели";
+            this.переключателиToolStripMenuItem.Click += new System.EventHandler(this.переключателиToolStripMenuItem_Click);
             // 
             // анимацияToolStripMenuItem
             // 
