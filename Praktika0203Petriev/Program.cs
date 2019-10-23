@@ -16,7 +16,7 @@ namespace Praktika0203Petriev
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new WorkWithString());
+            Application.Run(new Autarizaton());
         }
     }
 }
