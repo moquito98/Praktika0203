@@ -59,6 +59,12 @@
     <Compile Include="Files.Designer.cs">
       <DependentUpon>Files.cs</DependentUpon>
     </Compile>
+    <Compile Include="WorkWithString.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkWithString.Designer.cs">
+      <DependentUpon>WorkWithString.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +84,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Files.resx">
       <DependentUpon>Files.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkWithString.resx">
+      <DependentUpon>WorkWithString.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
