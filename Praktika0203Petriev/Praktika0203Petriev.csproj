@@ -100,6 +100,9 @@
     <EmbeddedResource Include="About.resx">
       <DependentUpon>About.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Animation.resx">
+      <DependentUpon>Animation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Autarizaton.resx">
       <DependentUpon>Autarizaton.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,6 +146,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\mrRobot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\walk2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
